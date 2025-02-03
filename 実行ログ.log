@@ -1,0 +1,179 @@
+~/d/aws    cdk bootstrap                                                                                    3483ms  月  2/ 3 23:52:23 2025
+ ⏳  Bootstrapping environment aws://528757830283/ap-northeast-1...
+Trusted accounts for deployment: (none)
+Trusted accounts for lookup: (none)
+Using default execution policy of 'arn:aws:iam::aws:policy/AdministratorAccess'. Pass '--cloudformation-execution-policies' to customize.
+CDKToolkit: creating CloudFormation changeset...
+CDKToolkit |  0/12 | 23:53:09 | REVIEW_IN_PROGRESS   | AWS::CloudFormation::Stack | CDKToolkit User Initiated
+CDKToolkit |  0/12 | 23:53:15 | CREATE_IN_PROGRESS   | AWS::CloudFormation::Stack | CDKToolkit User Initiated
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | ImagePublishingRole
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | FilePublishingRole
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::SSM::Parameter     | CdkBootstrapVersion
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | LookupRole
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::ECR::Repository    | ContainerAssetsRepository
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::S3::Bucket         | StagingBucket
+CDKToolkit |  0/12 | 23:53:18 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | CloudFormationExecutionRole
+CDKToolkit |  0/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::SSM::Parameter     | CdkBootstrapVersion Resource creation Initiated
+CDKToolkit |  0/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | ImagePublishingRole Resource creation Initiated
+CDKToolkit |  0/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | FilePublishingRole Resource creation Initiated
+CDKToolkit |  0/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::ECR::Repository    | ContainerAssetsRepository Resource creation Initiated
+CDKToolkit |  0/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | CloudFormationExecutionRole Resource creation Initiated
+CDKToolkit |  0/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::S3::Bucket         | StagingBucket Resource creation Initiated
+CDKToolkit |  1/12 | 23:53:19 | CREATE_COMPLETE      | AWS::SSM::Parameter     | CdkBootstrapVersion
+CDKToolkit |  1/12 | 23:53:19 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | LookupRole Resource creation Initiated
+CDKToolkit |  2/12 | 23:53:20 | CREATE_COMPLETE      | AWS::ECR::Repository    | ContainerAssetsRepository
+CDKToolkit |  3/12 | 23:53:34 | CREATE_COMPLETE      | AWS::S3::Bucket         | StagingBucket
+CDKToolkit |  3/12 | 23:53:35 | CREATE_IN_PROGRESS   | AWS::S3::BucketPolicy   | StagingBucketPolicy
+CDKToolkit |  3/12 | 23:53:37 | CREATE_IN_PROGRESS   | AWS::S3::BucketPolicy   | StagingBucketPolicy Resource creation Initiated
+CDKToolkit |  4/12 | 23:53:37 | CREATE_COMPLETE      | AWS::IAM::Role          | ImagePublishingRole
+CDKToolkit |  5/12 | 23:53:37 | CREATE_COMPLETE      | AWS::IAM::Role          | FilePublishingRole
+CDKToolkit |  6/12 | 23:53:37 | CREATE_COMPLETE      | AWS::S3::BucketPolicy   | StagingBucketPolicy
+CDKToolkit |  7/12 | 23:53:37 | CREATE_COMPLETE      | AWS::IAM::Role          | CloudFormationExecutionRole
+CDKToolkit |  7/12 | 23:53:38 | CREATE_IN_PROGRESS   | AWS::IAM::Policy        | FilePublishingRoleDefaultPolicy
+CDKToolkit |  7/12 | 23:53:38 | CREATE_IN_PROGRESS   | AWS::IAM::Policy        | ImagePublishingRoleDefaultPolicy
+CDKToolkit |  8/12 | 23:53:38 | CREATE_COMPLETE      | AWS::IAM::Role          | LookupRole
+CDKToolkit |  8/12 | 23:53:39 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | DeploymentActionRole
+CDKToolkit |  8/12 | 23:53:39 | CREATE_IN_PROGRESS   | AWS::IAM::Policy        | FilePublishingRoleDefaultPolicy Resource creation Initiated
+CDKToolkit |  8/12 | 23:53:39 | CREATE_IN_PROGRESS   | AWS::IAM::Policy        | ImagePublishingRoleDefaultPolicy Resource creation Initiated
+CDKToolkit |  8/12 | 23:53:40 | CREATE_IN_PROGRESS   | AWS::IAM::Role          | DeploymentActionRole Resource creation Initiated
+CDKToolkit |  9/12 | 23:53:55 | CREATE_COMPLETE      | AWS::IAM::Policy        | FilePublishingRoleDefaultPolicy
+CDKToolkit | 10/12 | 23:53:55 | CREATE_COMPLETE      | AWS::IAM::Policy        | ImagePublishingRoleDefaultPolicy
+CDKToolkit | 11/12 | 23:53:59 | CREATE_COMPLETE      | AWS::IAM::Role          | DeploymentActionRole
+CDKToolkit | 12/12 | 23:54:00 | CREATE_COMPLETE      | AWS::CloudFormation::Stack | CDKToolkit
+ ✅  Environment aws://528757830283/ap-northeast-1 bootstrapped.
+ ~/d/aws    cdk deploy                                                                                        56.1s  月  2/ 3 23:54:01 2025
+
+✨  Synthesis time: 3.02s
+
+Sqldb: start: Building 7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200:current_account-current_region
+Sqldb: success: Built 7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200:current_account-current_region
+Sqldb: start: Building 543ceb26b7e643546d31f9b081bd321b00321d52dff02341a2152217eded7515:current_account-current_region
+Sqldb: success: Built 543ceb26b7e643546d31f9b081bd321b00321d52dff02341a2152217eded7515:current_account-current_region
+Sqldb: start: Publishing 7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200:current_account-current_region
+Sqldb: start: Publishing 543ceb26b7e643546d31f9b081bd321b00321d52dff02341a2152217eded7515:current_account-current_region
+Sqldb: success: Published 7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200:current_account-current_region
+Sqldb: success: Published 543ceb26b7e643546d31f9b081bd321b00321d52dff02341a2152217eded7515:current_account-current_region
+Stack undefined
+This deployment will make potentially sensitive changes according to your current security approval level (--require-approval broadening).
+Please confirm you intend to make the following modifications:
+
+IAM Statement Changes
+┌───┬─────────────────────────────────────┬────────┬─────────────────────────────────────┬───────────────────────────────────────┬───────────┐
+│   │ Resource                            │ Effect │ Action                              │ Principal                             │ Condition │
+├───┼─────────────────────────────────────┼────────┼─────────────────────────────────────┼───────────────────────────────────────┼───────────┤
+│ + │ ${Custom::VpcRestrictDefaultSGCusto │ Allow  │ sts:AssumeRole                      │ Service:lambda.amazonaws.com          │           │
+│   │ mResourceProvider/Role.Arn}         │        │                                     │                                       │           │
+├───┼─────────────────────────────────────┼────────┼─────────────────────────────────────┼───────────────────────────────────────┼───────────┤
+│ + │ arn:${AWS::Partition}:ec2:${AWS::Re │ Allow  │ ec2:AuthorizeSecurityGroupEgress    │ AWS:${Custom::VpcRestrictDefaultSGCus │           │
+│   │ gion}:${AWS::AccountId}:security-gr │        │ ec2:AuthorizeSecurityGroupIngress   │ tomResourceProvider/Role}             │           │
+│   │ oup/${NetworkVpc7FB7348F.DefaultSec │        │ ec2:RevokeSecurityGroupEgress       │                                       │           │
+│   │ urityGroup}                         │        │ ec2:RevokeSecurityGroupIngress      │                                       │           │
+└───┴─────────────────────────────────────┴────────┴─────────────────────────────────────┴───────────────────────────────────────┴───────────┘
+IAM Policy Changes
+┌───┬───────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────┐
+│   │ Resource                                                          │ Managed Policy ARN                                                 │
+├───┼───────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│ + │ ${Custom::VpcRestrictDefaultSGCustomResourceProvider/Role}        │ {"Fn::Sub":"arn:${AWS::Partition}:iam::aws:policy/service-role/AWS │
+│   │                                                                   │ LambdaBasicExecutionRole"}                                         │
+└───┴───────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────┘
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
+
+Do you wish to deploy these changes (y/n)? y
+Sqldb: deploying... [1/1]
+Sqldb: creating CloudFormation changeset...
+Sqldb |  0/26 | 23:56:19 | REVIEW_IN_PROGRESS   | AWS::CloudFormation::Stack            | Sqldb User Initiated
+Sqldb |  0/26 | 23:56:24 | CREATE_IN_PROGRESS   | AWS::CloudFormation::Stack            | Sqldb User Initiated
+Sqldb |  0/26 | 23:56:28 | CREATE_IN_PROGRESS   | AWS::EC2::VPC                         | Network/Vpc (NetworkVpc7FB7348F)
+Sqldb |  0/26 | 23:56:28 | CREATE_IN_PROGRESS   | AWS::CDK::Metadata                    | CDKMetadata/Default (CDKMetadata)
+Sqldb |  0/26 | 23:56:28 | CREATE_IN_PROGRESS   | AWS::EC2::EIP                         | Network/Vpc/workspace-publicSubnet1/EIP (NetworkVpcworkspacepublicSubnet1EIP1B366D2B)
+Sqldb |  0/26 | 23:56:28 | CREATE_IN_PROGRESS   | AWS::EC2::InternetGateway             | Network/Vpc/IGW (NetworkVpcIGW6BEA7B02)
+Sqldb |  0/26 | 23:56:29 | CREATE_IN_PROGRESS   | AWS::EC2::InternetGateway             | Network/Vpc/IGW (NetworkVpcIGW6BEA7B02) Resource creation Initiated
+Sqldb |  0/26 | 23:56:29 | CREATE_IN_PROGRESS   | AWS::CDK::Metadata                    | CDKMetadata/Default (CDKMetadata) Resource creation Initiated
+Sqldb |  0/26 | 23:56:29 | CREATE_IN_PROGRESS   | AWS::EC2::EIP                         | Network/Vpc/workspace-publicSubnet1/EIP (NetworkVpcworkspacepublicSubnet1EIP1B366D2B) Resource creation Initiated
+Sqldb |  1/26 | 23:56:29 | CREATE_COMPLETE      | AWS::CDK::Metadata                    | CDKMetadata/Default (CDKMetadata)
+Sqldb |  1/26 | 23:56:29 | CREATE_IN_PROGRESS   | AWS::EC2::VPC                         | Network/Vpc (NetworkVpc7FB7348F) Resource creation Initiated
+Sqldb |  1/26 | 23:56:30 | CREATE_IN_PROGRESS   | AWS::EC2::InternetGateway             | Network/Vpc/IGW (NetworkVpcIGW6BEA7B02) Eventual consistency check initiated
+Sqldb |  1/26 | 23:56:30 | CREATE_IN_PROGRESS   | AWS::EC2::EIP                         | Network/Vpc/workspace-publicSubnet1/EIP (NetworkVpcworkspacepublicSubnet1EIP1B366D2B) Eventual consistency check initiated
+Sqldb |  2/26 | 23:56:41 | CREATE_COMPLETE      | AWS::EC2::VPC                         | Network/Vpc (NetworkVpc7FB7348F)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-privateSubnet1/Subnet (NetworkVpcworkspaceprivateSubnet1SubnetD6C73030)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet1/RouteTable (NetworkVpcworkspaceprivateSubnet1RouteTable0B04D34B)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::VPCGatewayAttachment        | Network/Vpc/VPCGW (NetworkVpcVPCGW8F3799B5)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet2/RouteTable (NetworkVpcworkspacepublicSubnet2RouteTableA3990B6A)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet2/RouteTable (NetworkVpcworkspaceprivateSubnet2RouteTable810FF2EF)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-privateSubnet2/Subnet (NetworkVpcworkspaceprivateSubnet2Subnet5A06C39B)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-publicSubnet1/Subnet (NetworkVpcworkspacepublicSubnet1Subnet91CEFC63)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-publicSubnet2/Subnet (NetworkVpcworkspacepublicSubnet2SubnetA56BB546)
+Sqldb |  2/26 | 23:56:42 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet1/RouteTable (NetworkVpcworkspacepublicSubnet1RouteTable0CA0598A)
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::IAM::Role                        | Custom::VpcRestrictDefaultSGCustomResourceProvider/Role (CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0)
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::VPCGatewayAttachment        | Network/Vpc/VPCGW (NetworkVpcVPCGW8F3799B5) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-privateSubnet1/Subnet (NetworkVpcworkspaceprivateSubnet1SubnetD6C73030) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet2/RouteTable (NetworkVpcworkspacepublicSubnet2RouteTableA3990B6A) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet2/RouteTable (NetworkVpcworkspaceprivateSubnet2RouteTable810FF2EF) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-privateSubnet2/Subnet (NetworkVpcworkspaceprivateSubnet2Subnet5A06C39B) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet1/RouteTable (NetworkVpcworkspaceprivateSubnet1RouteTable0B04D34B) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet1/RouteTable (NetworkVpcworkspacepublicSubnet1RouteTable0CA0598A) Resource creation Initiated
+Sqldb |  2/26 | 23:56:43 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-publicSubnet1/Subnet (NetworkVpcworkspacepublicSubnet1Subnet91CEFC63) Resource creation Initiated
+Sqldb |  2/26 | 23:56:44 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet2/RouteTable (NetworkVpcworkspacepublicSubnet2RouteTableA3990B6A) Eventual consistency check initiated
+Sqldb |  2/26 | 23:56:44 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet2/RouteTable (NetworkVpcworkspaceprivateSubnet2RouteTable810FF2EF) Eventual consistency check initiated
+Sqldb |  2/26 | 23:56:44 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet1/RouteTable (NetworkVpcworkspaceprivateSubnet1RouteTable0B04D34B) Eventual consistency check initiated
+Sqldb |  2/26 | 23:56:44 | CREATE_IN_PROGRESS   | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet1/RouteTable (NetworkVpcworkspacepublicSubnet1RouteTable0CA0598A) Eventual consistency check initiated
+Sqldb |  2/26 | 23:56:44 | CREATE_IN_PROGRESS   | AWS::IAM::Role                        | Custom::VpcRestrictDefaultSGCustomResourceProvider/Role (CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0) Resource creation Initiated
+Sqldb |  2/26 | 23:56:44 | CREATE_IN_PROGRESS   | AWS::EC2::Subnet                      | Network/Vpc/workspace-publicSubnet2/Subnet (NetworkVpcworkspacepublicSubnet2SubnetA56BB546) Resource creation Initiated
+Sqldb |  3/26 | 23:56:45 | CREATE_COMPLETE      | AWS::EC2::VPCGatewayAttachment        | Network/Vpc/VPCGW (NetworkVpcVPCGW8F3799B5)
+Sqldb |  4/26 | 23:56:45 | CREATE_COMPLETE      | AWS::EC2::InternetGateway             | Network/Vpc/IGW (NetworkVpcIGW6BEA7B02)
+Sqldb |  5/26 | 23:56:45 | CREATE_COMPLETE      | AWS::EC2::EIP                         | Network/Vpc/workspace-publicSubnet1/EIP (NetworkVpcworkspacepublicSubnet1EIP1B366D2B)
+Sqldb |  6/26 | 23:56:46 | CREATE_COMPLETE      | AWS::EC2::Subnet                      | Network/Vpc/workspace-privateSubnet1/Subnet (NetworkVpcworkspaceprivateSubnet1SubnetD6C73030)
+Sqldb |  7/26 | 23:56:46 | CREATE_COMPLETE      | AWS::EC2::Subnet                      | Network/Vpc/workspace-privateSubnet2/Subnet (NetworkVpcworkspaceprivateSubnet2Subnet5A06C39B)
+Sqldb |  7/26 | 23:56:47 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-privateSubnet1/RouteTableAssociation (NetworkVpcworkspaceprivateSubnet1RouteTableAssociation1334C535)
+Sqldb |  8/26 | 23:56:47 | CREATE_COMPLETE      | AWS::EC2::Subnet                      | Network/Vpc/workspace-publicSubnet1/Subnet (NetworkVpcworkspacepublicSubnet1Subnet91CEFC63)
+Sqldb |  8/26 | 23:56:47 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-privateSubnet2/RouteTableAssociation (NetworkVpcworkspaceprivateSubnet2RouteTableAssociation05B4EE25)
+Sqldb |  8/26 | 23:56:47 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-publicSubnet1/RouteTableAssociation (NetworkVpcworkspacepublicSubnet1RouteTableAssociationE062E132)
+Sqldb |  9/26 | 23:56:48 | CREATE_COMPLETE      | AWS::EC2::Subnet                      | Network/Vpc/workspace-publicSubnet2/Subnet (NetworkVpcworkspacepublicSubnet2SubnetA56BB546)
+Sqldb |  9/26 | 23:56:48 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-privateSubnet1/RouteTableAssociation (NetworkVpcworkspaceprivateSubnet1RouteTableAssociation1334C535) Resource creation Initiated
+Sqldb |  9/26 | 23:56:48 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-privateSubnet2/RouteTableAssociation (NetworkVpcworkspaceprivateSubnet2RouteTableAssociation05B4EE25) Resource creation Initiated
+Sqldb |  9/26 | 23:56:48 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-publicSubnet2/RouteTableAssociation (NetworkVpcworkspacepublicSubnet2RouteTableAssociationF6A32C10)
+Sqldb | 10/26 | 23:56:49 | CREATE_COMPLETE      | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-privateSubnet1/RouteTableAssociation (NetworkVpcworkspaceprivateSubnet1RouteTableAssociation1334C535)
+Sqldb | 10/26 | 23:56:49 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-publicSubnet1/RouteTableAssociation (NetworkVpcworkspacepublicSubnet1RouteTableAssociationE062E132) Resource creation Initiated
+Sqldb | 11/26 | 23:56:49 | CREATE_COMPLETE      | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-privateSubnet2/RouteTableAssociation (NetworkVpcworkspaceprivateSubnet2RouteTableAssociation05B4EE25)
+Sqldb | 12/26 | 23:56:49 | CREATE_COMPLETE      | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-publicSubnet1/RouteTableAssociation (NetworkVpcworkspacepublicSubnet1RouteTableAssociationE062E132)
+Sqldb | 12/26 | 23:56:50 | CREATE_IN_PROGRESS   | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-publicSubnet2/RouteTableAssociation (NetworkVpcworkspacepublicSubnet2RouteTableAssociationF6A32C10) Resource creation Initiated
+Sqldb | 13/26 | 23:56:50 | CREATE_COMPLETE      | AWS::EC2::SubnetRouteTableAssociation | Network/Vpc/workspace-publicSubnet2/RouteTableAssociation (NetworkVpcworkspacepublicSubnet2RouteTableAssociationF6A32C10)
+Sqldb | 14/26 | 23:56:54 | CREATE_COMPLETE      | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet1/RouteTable (NetworkVpcworkspacepublicSubnet1RouteTable0CA0598A)
+Sqldb | 15/26 | 23:56:54 | CREATE_COMPLETE      | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet2/RouteTable (NetworkVpcworkspaceprivateSubnet2RouteTable810FF2EF)
+Sqldb | 16/26 | 23:56:54 | CREATE_COMPLETE      | AWS::EC2::RouteTable                  | Network/Vpc/workspace-publicSubnet2/RouteTable (NetworkVpcworkspacepublicSubnet2RouteTableA3990B6A)
+Sqldb | 17/26 | 23:56:54 | CREATE_COMPLETE      | AWS::EC2::RouteTable                  | Network/Vpc/workspace-privateSubnet1/RouteTable (NetworkVpcworkspaceprivateSubnet1RouteTable0B04D34B)
+Sqldb | 17/26 | 23:56:55 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-publicSubnet1/DefaultRoute (NetworkVpcworkspacepublicSubnet1DefaultRoute5B7350BB)
+Sqldb | 17/26 | 23:56:55 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-publicSubnet2/DefaultRoute (NetworkVpcworkspacepublicSubnet2DefaultRouteABEDD6CF)
+Sqldb | 17/26 | 23:56:56 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-publicSubnet2/DefaultRoute (NetworkVpcworkspacepublicSubnet2DefaultRouteABEDD6CF) Resource creation Initiated
+Sqldb | 17/26 | 23:56:56 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-publicSubnet1/DefaultRoute (NetworkVpcworkspacepublicSubnet1DefaultRoute5B7350BB) Resource creation Initiated
+Sqldb | 18/26 | 23:56:56 | CREATE_COMPLETE      | AWS::EC2::Route                       | Network/Vpc/workspace-publicSubnet2/DefaultRoute (NetworkVpcworkspacepublicSubnet2DefaultRouteABEDD6CF)
+Sqldb | 19/26 | 23:56:57 | CREATE_COMPLETE      | AWS::EC2::Route                       | Network/Vpc/workspace-publicSubnet1/DefaultRoute (NetworkVpcworkspacepublicSubnet1DefaultRoute5B7350BB)
+Sqldb | 19/26 | 23:56:58 | CREATE_IN_PROGRESS   | AWS::EC2::NatGateway                  | Network/Vpc/workspace-publicSubnet1/NATGateway (NetworkVpcworkspacepublicSubnet1NATGateway521C9DDB)
+Sqldb | 19/26 | 23:56:59 | CREATE_IN_PROGRESS   | AWS::EC2::NatGateway                  | Network/Vpc/workspace-publicSubnet1/NATGateway (NetworkVpcworkspacepublicSubnet1NATGateway521C9DDB) Resource creation Initiated
+Sqldb | 20/26 | 23:57:01 | CREATE_COMPLETE      | AWS::IAM::Role                        | Custom::VpcRestrictDefaultSGCustomResourceProvider/Role (CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0)
+Sqldb | 20/26 | 23:57:03 | CREATE_IN_PROGRESS   | AWS::Lambda::Function                 | Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler (CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E)
+Sqldb | 20/26 | 23:57:04 | CREATE_IN_PROGRESS   | AWS::Lambda::Function                 | Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler (CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E) Resource creation Initiated
+Sqldb | 20/26 | 23:57:05 | CREATE_IN_PROGRESS   | AWS::Lambda::Function                 | Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler (CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E) Eventual consistency check initiated
+Sqldb | 21/26 | 23:57:10 | CREATE_COMPLETE      | AWS::Lambda::Function                 | Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler (CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E)
+Sqldb | 21/26 | 23:57:11 | CREATE_IN_PROGRESS   | Custom::VpcRestrictDefaultSG          | Network/Vpc/RestrictDefaultSecurityGroupCustomResource/Default (NetworkVpcRestrictDefaultSecurityGroupCustomResource491E144D)
+Sqldb | 21/26 | 23:57:21 | CREATE_IN_PROGRESS   | Custom::VpcRestrictDefaultSG          | Network/Vpc/RestrictDefaultSecurityGroupCustomResource/Default (NetworkVpcRestrictDefaultSecurityGroupCustomResource491E144D) Resource creation Initiated
+Sqldb | 22/26 | 23:57:21 | CREATE_COMPLETE      | Custom::VpcRestrictDefaultSG          | Network/Vpc/RestrictDefaultSecurityGroupCustomResource/Default (NetworkVpcRestrictDefaultSecurityGroupCustomResource491E144D)
+Sqldb | 22/26 | 23:57:24 | CREATE_IN_PROGRESS   | AWS::EC2::NatGateway                  | Network/Vpc/workspace-publicSubnet1/NATGateway (NetworkVpcworkspacepublicSubnet1NATGateway521C9DDB) Eventual consistency check initiated
+22/26 Currently in progress: Sqldb, NetworkVpcworkspacepublicSubnet1NATGateway521C9DDB
+Sqldb | 23/26 | 23:59:21 | CREATE_COMPLETE      | AWS::EC2::NatGateway                  | Network/Vpc/workspace-publicSubnet1/NATGateway (NetworkVpcworkspacepublicSubnet1NATGateway521C9DDB)
+Sqldb | 23/26 | 23:59:22 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-privateSubnet1/DefaultRoute (NetworkVpcworkspaceprivateSubnet1DefaultRoute183D7CAC)
+Sqldb | 23/26 | 23:59:22 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-privateSubnet2/DefaultRoute (NetworkVpcworkspaceprivateSubnet2DefaultRouteAE692BEA)
+Sqldb | 23/26 | 23:59:23 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-privateSubnet1/DefaultRoute (NetworkVpcworkspaceprivateSubnet1DefaultRoute183D7CAC) Resource creation Initiated
+Sqldb | 23/26 | 23:59:23 | CREATE_IN_PROGRESS   | AWS::EC2::Route                       | Network/Vpc/workspace-privateSubnet2/DefaultRoute (NetworkVpcworkspaceprivateSubnet2DefaultRouteAE692BEA) Resource creation Initiated
+Sqldb | 24/26 | 23:59:24 | CREATE_COMPLETE      | AWS::EC2::Route                       | Network/Vpc/workspace-privateSubnet1/DefaultRoute (NetworkVpcworkspaceprivateSubnet1DefaultRoute183D7CAC)
+Sqldb | 25/26 | 23:59:24 | CREATE_COMPLETE      | AWS::EC2::Route                       | Network/Vpc/workspace-privateSubnet2/DefaultRoute (NetworkVpcworkspaceprivateSubnet2DefaultRouteAE692BEA)
+Sqldb | 26/26 | 23:59:25 | CREATE_COMPLETE      | AWS::CloudFormation::Stack            | Sqldb
+
+ ✅  Sqldb
+
+✨  Deployment time: 190.28s
+
+Stack ARN:
+arn:aws:cloudformation:ap-northeast-1:528757830283:stack/Sqldb/0657a940-e23f-11ef-895c-0ed985fde757
+
+✨  Total time: 193.3s
