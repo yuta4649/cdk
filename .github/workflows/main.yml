@@ -2,14 +2,18 @@
 # The workflow Creates static website using aws s3
 name: CDK Deploy
 on:
-  push
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/*'
 
 # permission can be added at job level or workflow level
 permissions:
   id-token: write   # This is required for requesting the JWT
   contents: read    # This is required for actions/checkout
 jobs:
-  S3PackageUpload:
+  cdk-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
@@ -20,6 +24,7 @@ jobs:
           role-to-assume: 'arn:aws:iam::528757830283:role/github-cdk-deploy'
           role-session-name: cdk-oidc-session
           aws-region: 'ap-northeast-1'
-      - name: aws sample connect
-        run: |
-          aws s3 ls
+      - name: cdk diff check
+        run: cdk diff
+      - name: cdk deploy
+        run: cdk deploy
