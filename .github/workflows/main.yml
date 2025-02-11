@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/*'
+      - 'src/**'
 
 # permission can be added at job level or workflow level
 permissions:
