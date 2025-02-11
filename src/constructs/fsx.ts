@@ -10,5 +10,10 @@ export class Fsx extends Construct {
   fsx: fsx.CfnFileSystem;
   constructor(scope: Construct, id: string, props: FsxProps) {
     super(scope, id);
+    this.fsx = new fsx.CfnFileSystem(this, 'FsxWindows', {
+        fileSystemType: 'WINDOWS',
+        storageCapacity: 1,
+        subnetIds: props.vpc.privateSubnets.map(subnet => subnet.subnetId)
+    })
   }
 }
