@@ -13,7 +13,12 @@ export class Fsx extends Construct {
     this.fsx = new fsx.CfnFileSystem(this, 'FsxWindows', {
         fileSystemType: 'WINDOWS',
         storageCapacity: 1,
-        subnetIds: props.vpc.privateSubnets.map(subnet => subnet.subnetId)
+        subnetIds: props.vpc.privateSubnets.map(subnet => subnet.subnetId),
+        windowsConfiguration: {
+            throughputCapacity: 32,
+            activeDirectoryId: 'test',
+            deploymentType: 'MULTI_AZ_1'
+        }
     })
   }
 }
