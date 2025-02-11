@@ -19,10 +19,8 @@ jobs:
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
-      - name: Setup node
-        uses: actions/setup-node@v4
-      - name: Setup dependencies
-        run: npm ci
+      - name: install cdk
+        run: npm install -g aws-cdk@2.177.0
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502
         with:
