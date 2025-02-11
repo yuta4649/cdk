@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'src/**'
+      - '.github/**'
 
 # permission can be added at job level or workflow level
 permissions:
@@ -18,6 +19,8 @@ jobs:
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
       - name: Setup dependencies
         run: npm ci
       - name: configure aws credentials
