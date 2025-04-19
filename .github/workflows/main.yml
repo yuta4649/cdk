@@ -29,5 +29,5 @@ jobs:
           aws-region: 'ap-northeast-1'
       - name: cdk diff check
         run: cdk diff
-      - name: cdk deploy
-        run: cdk deploy --require-approval never
+      # - name: cdk deploy
+      #   run: cdk deploy --require-approval never

@@ -1,25 +1,26 @@
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
-import * as directoryservice from 'aws-cdk-lib/aws-directoryservice';
+import * as iam from 'aws-cdk-lib/aws-iam'
 import { Construct } from 'constructs';
 
-interface ManagedAdProps {
+interface ActiveDirectoryProps {
   vpc: ec2.Vpc;
 }
 
 export class ActiveDirectory extends Construct {
-  directoryId: string;
-  constructor(scope: Construct, id: string, props: ManagedAdProps) {
+  constructor(scope: Construct, id: string, props: ActiveDirectoryProps) {
     super(scope, id);
-    // AWS Managed AD 作成
-    const managedAd = new directoryservice.CfnMicrosoftAD(this, 'ManagedAD', {
-      name: 'fossa.local',
-      password: 'P@ssword_000',
-      vpcSettings: {
-        subnetIds: props.vpc.privateSubnets.map((subnet) => subnet.subnetId),
-        vpcId: props.vpc.vpcId,
-      }, 
-      edition: 'Standard',
+
+    const role = new iam.Role(this, 'Role', {
+      assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com')
     });
-  this.directoryId = managedAd.ref;
+
+    role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMManagedInstanceCore'));
+
+    new ec2.Instance(this, 'Instance', {
+      vpc: props.vpc,
+      machineImage: ec2.MachineImage.latestWindows(ec2.WindowsVersion.WINDOWS_SERVER_2019_JAPANESE_FULL_BASE),
+      instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MEDIUM),
+      keyName: 'ec2-key'
+    });
   }
 }
